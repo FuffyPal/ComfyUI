@@ -19,5 +19,5 @@ WORKDIR /workspace/ComfyUI
 
 
 
-CMD [ "python" , "main.py"]
+CMD [ "python" , "main.py" , "--listen"]
 
