@@ -14,8 +14,16 @@
 $podman run  -v sdmodels:/models --name comfyui -p 8188:8188 -d --device nvidia.com/gpu=all --rm --security-opt=label=disable comfyui:latest
 ```
 
+```sh
+$podman run -d -v Models:/models  --rm --name comfyui --ipc=host --runtime=nvidia --gpus all localhost/comfyui:latest
+```
+
 
 if no volume
 ```sh
 $podman run  --name comfyui -p 8188:8188 -d --device nvidia.com/gpu=all --rm --security-opt=label=disable comfyui:latest 
+```
+
+```sh
+$podman run -d  --rm --name comfyui --ipc=host --runtime=nvidia --gpus all localhost/comfyui:latest
 ```
